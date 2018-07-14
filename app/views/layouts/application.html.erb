@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shopsite</title>
+    <title>Shop the Fort</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Eat/Drink", eat_path %>
+    <%= link_to "Retail", retail_path %>
+    <%= link_to "Vehicles", vehicles_path %>
+    <%= link_to "Hotels", hotels_path %>
+    <%= link_to "Services", services_path %>
+    <%= link_to "Contact", contact_path %>
     <%= yield %>
   </body>
 </html>
