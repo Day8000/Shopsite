@@ -1,1 +1,14 @@
 @import "bootstrap";
+@import "pages";
+
+body {
+    padding-top: 1.5rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.container {
+    max-width: 46rem;
+}

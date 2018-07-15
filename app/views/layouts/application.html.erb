@@ -3,20 +3,44 @@
   <head>
     <title>Shop the Fort</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Eat/Drink", eat_path %>
-    <%= link_to "Retail", retail_path %>
-    <%= link_to "Vehicles", vehicles_path %>
-    <%= link_to "Hotels", hotels_path %>
-    <%= link_to "Services", services_path %>
-    <%= link_to "Contact", contact_path %>
-    <%= yield %>
+
+    <div class="container">
+
+      <!-- Navigation Bar -->
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Eat/Drink", eat_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Retail", retail_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Hotels", hotels_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Vehicles", vehicles_path, class: "nav-link" %></li>
+            <li class="nav-item"><%= link_to "Services", services_path, class: "nav-link" %></li>
+
+          </ul>
+        </nav>
+        <h3 class="text-muted">Shop the Fort</h3>
+      </div>
+
+      <!-- Page Content -->
+      <%= yield %>
+      
+      <!-- Footer -->
+      <footer>
+        <div class="jumbotron jumbotron-home">
+    <div class="container">
+        
+    </div>
+        <hr>
+        
+      </footer>
+
+    </div>
   </body>
 </html>
